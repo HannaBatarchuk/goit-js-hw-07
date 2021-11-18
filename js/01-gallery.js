@@ -29,13 +29,11 @@ function onImageClick(event) {
     console.log(filterSource)
 
     const instance = basicLightbox.create(`
-    <div class="modal">
-        <img class="modal-img" src="${filterSource}">
-    </div>`, {
+        <img src="${filterSource}" width="800" height="600">`, {
     onShow: (instance) => {
         instance.element().querySelector('img').onclick = instance.close;
         }
     })
-    instance.show()
+    instance.show();
 }
 
